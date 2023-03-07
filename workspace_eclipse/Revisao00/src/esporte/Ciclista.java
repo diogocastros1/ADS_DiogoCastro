@@ -9,4 +9,5 @@ public class Ciclista extends Atleta {
 	void pedalar() {
 		System.out.println("Ciclista pedalando.");
 	}
+	
 }
