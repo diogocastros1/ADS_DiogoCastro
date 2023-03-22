@@ -17,8 +17,11 @@ public class Animal {
 	public String getNome() {
 		return nome;
 	}
-	
-	
-	
+
+//	Polimorfismo
+	@Override
+	public String toString() {
+		return "Animal [id=" + id + ", nome=" + nome + "]";
+	}
 	
 }

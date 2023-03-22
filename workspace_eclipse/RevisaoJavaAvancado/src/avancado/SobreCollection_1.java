@@ -17,20 +17,21 @@ public class SobreCollection_1 {
 		colecao.add("Pantera");
 		colecao.add("Avestruz");
 		
-		System.out.println(colecao);
+		System.out.println(colecao); 
 		
+//		[Inserção]
 //		for (String c : colecao) {
-//			System.out.println(c);
+//			System.out.println(c); 
 //		}
 		
 	}
 
-//	O HashSet retorna a collection de forma aleatorio
+//	O HashSet retorna a collection de forma aleatorio [Aleatório] 
 //	private static Collection<String> buildCollectionImplemetation() {
 //		return new HashSet<String>();
 //	}
 	
-//	Já o TreeSet ordena em ordem alfabetica
+//	Já o TreeSet ordena em ordem alfabetica [Natural]
 	private static Collection<String> buildCollectionImplemetation() {
 		return new TreeSet<String>();
 	}
