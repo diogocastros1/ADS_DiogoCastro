@@ -1,9 +1,10 @@
 package avancado;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class SobreLista_2 {
+public class SobreComparator_1 {
 
 	public static void main(String[] args) {
 		List<Animal> listaAnimais = new ArrayList<>();
@@ -15,8 +16,14 @@ public class SobreLista_2 {
 		listaAnimais.add(new Animal(5L, "Girafa"));
 		listaAnimais.add(new Animal(6L, "Gato"));
 
+		System.out.println("> Pela ordem de nome: ");
+		Collections.sort(listaAnimais, new ComparadorPorNome());
 		System.out.println(listaAnimais);
+
+		System.out.println("> Pela ordem alfabética do nome animal:");
+		Collections.sort(listaAnimais, new ComparadorPorId());
+		System.out.println(listaAnimais);
+
 	}
-	
-	
+
 }
