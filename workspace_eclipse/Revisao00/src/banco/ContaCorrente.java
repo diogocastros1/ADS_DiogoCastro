@@ -3,7 +3,7 @@ package banco;
 public class ContaCorrente extends Conta {
 
 	@Override
-	void retanbilizar() {
+	void rentanbilizar() {
 		this.saldo *= 1.01;
 	}
 	
