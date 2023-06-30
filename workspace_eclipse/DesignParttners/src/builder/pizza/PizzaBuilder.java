@@ -1,0 +1,43 @@
+package builder.pizza;
+
+public class PizzaBuilder {
+
+	private Pizza pizza;
+	
+	public PizzaBuilder() {
+		this.pizza = new Pizza();
+	}
+	
+	public PizzaBuilder setSize(Integer size) {
+		pizza.setSize(size);
+		
+		return this;
+	}
+	
+	public PizzaBuilder addCheese() {
+		pizza.setFlagCheese(true);
+		return this;
+	}
+	public PizzaBuilder addPepperoni() {
+		pizza.setFlagPepperoni(true);
+		return this;
+	}
+	public Pizza getPizza() {
+		validateSize();
+		validateIngredients();
+		return pizza;
+	}
+	
+	private void validateSize() {
+		Integer s = pizza.getSize();
+		if(s<=0 || s>3) {
+			throw new IllegalStateException("Tamanho inválido");
+		}
+	}
+	
+	private void validateIngredients() {
+		if(!pizza.getFlagCheese() && !pizza.getFlagPepperoni()) {
+			throw new IllegalStateException("Nenhum ingrediente");
+		}
+	}
+}
